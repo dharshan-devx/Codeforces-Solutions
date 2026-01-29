@@ -6,29 +6,26 @@ data = input().split()
 
 index = 0
 
-t = int(data[index]) # Read the number of test cases
+t = int(data[index]) 
 index += 1
 
 for _ in range(t):
-	n = int(data[index]) # Read the size of the array
-	k = int(data[index + 1]) # Read the integer k
+	n = int(data[index]) 
+	k = int(data[index + 1]) 
 	index += 2
 
-	a = list(map(int, data[index:index + n])) # Input array elements
+	a = list(map(int, data[index:index + n])) 
 	index += n
 
-	# Flag to check if k is present in the array
+
 	number_is_present = False
 
 	for i in range(n):
-		if a[i] == k: # Check if the current element is equal to k
-			number_is_present = True # Set flag to true if k is found
-			break # Exit the loop as we found k
+		if a[i] == k: 
+			number_is_present = True 
+			break 
 
 	if number_is_present:
-		print("YES") # Output YES
+		print("YES")
 	else:
-		print("NO") # Output NO
-
-# Time Complexity (TC): O(n) = O(100)
-# Space Complexity (SC): O(n)
+		print("NO") 
